@@ -12,7 +12,7 @@
             background-color: #f4f4f4;
         }
         .container {
-            max-width: 900px;
+            max-width: 1000px;
             margin: 0 auto;
             background: white;
             padding: 20px;
@@ -41,6 +41,8 @@
             border-radius: 4px;
             font-family: monospace;
             font-size: 14px;
+            max-height: 300px;
+            overflow-y: auto;
         }
         button {
             background: #28a745;
@@ -50,6 +52,7 @@
             border-radius: 5px;
             cursor: pointer;
             font-size: 16px;
+            margin: 5px;
         }
         button:hover {
             background: #218838;
@@ -60,12 +63,28 @@
             border-radius: 5px;
             margin-top: 10px;
         }
+        input {
+            padding: 8px;
+            margin: 5px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            width: 300px;
+        }
+        .valido {
+            color: green;
+            font-weight: bold;
+        }
+        .invalido {
+            color: red;
+            font-weight: bold;
+        }
     </style>
 </head>
 <body>
     <div class="container">
         <h1>Laboratorio 18 - AJAX, Módulos y Expresiones Regulares</h1>
         
+        <!-- AJAX EXERCISES -->
         <div class="ejercicio">
             <h3>Ejercicio 3: Fetch con Promesas (Usuario 10)</h3>
             <button onclick="cargarUsuarioPromesas()">Cargar Usuario</button>
@@ -94,6 +113,45 @@
             <h3>Ejercicio 7: Actualizar DOM con Promesas (Usuario 2)</h3>
             <button onclick="cargarUsuario2Promesas()">Cargar Usuario</button>
             <div id="resultado7" class="resultado">Presiona el botón para cargar...</div>
+        </div>
+        
+        <div class="ejercicio">
+            <h3>Ejercicio 8: Actualizar DOM con Async/Await (Usuario 2)</h3>
+            <button onclick="cargarUsuario2Async()">Cargar Usuario</button>
+            <div id="resultado8" class="resultado">Presiona el botón para cargar...</div>
+        </div>
+        
+        <!-- REGEX EXERCISES -->
+        <div class="ejercicio">
+            <h3>Ejercicio 11: Validar Contraseña Fuerte</h3>
+            <input type="text" id="password" placeholder="Ingresa una contraseña">
+            <button onclick="validarPassword()">Validar</button>
+            <div id="resultado11" class="resultado">Ingresa una contraseña para validar...</div>
+        </div>
+        
+        <div class="ejercicio">
+            <h3>Ejercicio 12: Encontrar URLs Seguras</h3>
+            <button onclick="encontrarURLs()">Buscar URLs</button>
+            <div id="resultado12" class="resultado">Presiona el botón para buscar...</div>
+        </div>
+        
+        <div class="ejercicio">
+            <h3>Ejercicio 13: Quitar Etiquetas HTML</h3>
+            <button onclick="quitarHTML()">Limpiar HTML</button>
+            <div id="resultado13" class="resultado">Presiona el botón para limpiar...</div>
+        </div>
+        
+        <div class="ejercicio">
+            <h3>Ejercicio 14: Dividir en Oraciones</h3>
+            <button onclick="dividirOraciones()">Dividir Texto</button>
+            <div id="resultado14" class="resultado">Presiona el botón para dividir...</div>
+        </div>
+        
+        <div class="ejercicio">
+            <h3>Ejercicio 15: Validar Fecha (dd/mm/yyyy)</h3>
+            <input type="text" id="fecha" placeholder="Ejemplo: 25/12/2024">
+            <button onclick="validarFecha()">Validar</button>
+            <div id="resultado15" class="resultado">Ingresa una fecha para validar...</div>
         </div>
     </div>
     
